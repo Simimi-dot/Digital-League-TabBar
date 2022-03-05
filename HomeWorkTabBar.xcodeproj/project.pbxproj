@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		062302F927D3561000FF2905 /* CustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062302F827D3561000FF2905 /* CustomCellModel.swift */; };
 		064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7827D2342D00A3092C /* AppDelegate.swift */; };
 		064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7A27D2342D00A3092C /* SceneDelegate.swift */; };
 		064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7C27D2342D00A3092C /* MainTabBarController.swift */; };
@@ -20,11 +19,9 @@
 		064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE9527D2437300A3092C /* LargeNavigationContoller.swift */; };
 		064DAE9C27D24D2800A3092C /* SomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064DAE9B27D24D2800A3092C /* SomeStoryboard.storyboard */; };
 		064DAEA027D26B9500A3092C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE9F27D26B9500A3092C /* CustomView.swift */; };
-		064DAEA227D286BE00A3092C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAEA127D286BE00A3092C /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		062302F827D3561000FF2905 /* CustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellModel.swift; sourceTree = "<group>"; };
 		064DAE7527D2342D00A3092C /* HomeWorkTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064DAE7827D2342D00A3092C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064DAE7A27D2342D00A3092C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +36,6 @@
 		064DAE9527D2437300A3092C /* LargeNavigationContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNavigationContoller.swift; sourceTree = "<group>"; };
 		064DAE9B27D24D2800A3092C /* SomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SomeStoryboard.storyboard; sourceTree = "<group>"; };
 		064DAE9F27D26B9500A3092C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		064DAEA127D286BE00A3092C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +72,6 @@
 				064DAE7A27D2342D00A3092C /* SceneDelegate.swift */,
 				064DAE7C27D2342D00A3092C /* MainTabBarController.swift */,
 				064DAE9F27D26B9500A3092C /* CustomView.swift */,
-				064DAEA127D286BE00A3092C /* CustomCell.swift */,
-				062302F827D3561000FF2905 /* CustomCellModel.swift */,
 				064DAE8E27D2430F00A3092C /* Auto Layout */,
 				064DAE9727D2437900A3092C /* XIB */,
 				064DAE9827D2438200A3092C /* Manual */,
@@ -204,13 +198,11 @@
 			files = (
 				064DAE9427D2435E00A3092C /* NavigationContoller.swift in Sources */,
 				064DAE9227D2434C00A3092C /* ManualContoller.swift in Sources */,
-				064DAEA227D286BE00A3092C /* CustomCell.swift in Sources */,
 				064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */,
 				064DAEA027D26B9500A3092C /* CustomView.swift in Sources */,
 				064DAE8D27D2402100A3092C /* AutoLayoutContoller.swift in Sources */,
 				064DAE9027D2433300A3092C /* XIBContoller.swift in Sources */,
 				064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */,
-				062302F927D3561000FF2905 /* CustomCellModel.swift in Sources */,
 				064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */,
 				064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */,
 			);
