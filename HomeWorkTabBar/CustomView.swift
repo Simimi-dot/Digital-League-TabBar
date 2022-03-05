@@ -30,6 +30,21 @@ enum courseEvent: String {
 
 class CustomView: UIView {
     
+    //MARK: - IBOutlet
+    
+    @IBOutlet weak var xibCourseView: UIView!
+    @IBOutlet weak var xibBackEventView: UIView!
+    @IBOutlet weak var xibCourseEventLabel: UILabel!
+    @IBOutlet weak var xibCourseNameLabel: UILabel!
+    @IBOutlet weak var xibMoreButton: UIButton!
+    @IBOutlet weak var xibPriceLabel: UILabel!
+    @IBOutlet weak var xibBlueButton: UIButton!
+    
+    // Properties
+    
+    
+    
+    
     //MARK: - Properties
     
     lazy var customCourseView: UIView = {
@@ -94,7 +109,7 @@ class CustomView: UIView {
         button.backgroundColor = .systemBlue
         return button
     }()
-    
+
     
     // MARK: - init
     
@@ -107,7 +122,20 @@ class CustomView: UIView {
         
         self.courseNameLabel.text = courseName.rawValue
         self.priceLabel.text = coursePrice.rawValue
-        //        configure()
+    }
+    
+    // MARK: - XIBInit
+    
+    init(xibCourseEvent: courseEvent?, xibCourseName: courseName, xibCoursePrice: coursePrise) {
+        super.init(frame: .zero)
+        
+        if let xibCourseEvent = xibCourseEvent {
+            self.courseEventLabel.text = xibCourseEvent.rawValue
+        }
+        
+        self.courseNameLabel.text = xibCourseName.rawValue
+        self.priceLabel.text = xibCoursePrice.rawValue
+    
     }
     
     required init?(coder: NSCoder) {
@@ -116,42 +144,6 @@ class CustomView: UIView {
     
     
     // MARK: - Methods
-    
-    //    private func configure() {
-    //        self.backgroundColor = .white
-    //
-    //        self.addSubview(customCourseView)
-    //
-    //        customView.addSubview(courseNameLabel)
-    //        customView.addSubview(moreButton)
-    //        customView.addSubview(priceLabel)
-    //        customView.addSubview(blueButton)
-    //
-    //        NSLayoutConstraint.activate([
-    //            customView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 50),
-    //            customView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-    //            customView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-    //
-    //            courseNameLabel.topAnchor.constraint(equalTo: customView.topAnchor, constant: 16),
-    //            courseNameLabel.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 16),
-    //            courseNameLabel.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -16),
-    //
-    //            moreButton.topAnchor.constraint(equalTo: courseNameLabel.bottomAnchor, constant: 16),
-    //            moreButton.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 16),
-    //            moreButton.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -16),
-    //
-    //            priceLabel.topAnchor.constraint(equalTo: moreButton.bottomAnchor, constant: 16),
-    //            priceLabel.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 16),
-    //            priceLabel.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -16),
-    //
-    //            blueButton.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 16),
-    //            blueButton.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 16),
-    //            blueButton.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -16),
-    //            blueButton.bottomAnchor.constraint(equalTo: customView.bottomAnchor, constant: -16)
-    //
-    //        ])
-    //    }
-    
     
 }
 
