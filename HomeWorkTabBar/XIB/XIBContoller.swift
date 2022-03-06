@@ -9,23 +9,27 @@ import UIKit
 
 //MARK: - Class
 class XIBContoller: UIViewController {
-
-//MARK: - Properties
-
-    let xibCustomView = CustomView(xibCourseEvent: .backend, xibCourseName: .backend, xibCoursePrice: .backend)
     
-//MARK: - Life cycle
+    //MARK: - Properties
+    
+    let xibView = CustomView(xibCourseEvent: .android, xibCourseName: .andriod, xibCoursePrice: .android)
+    
+    //MARK: - Life cycle
     override func loadView() {
-        self.view = xibCustomView
+        self.view = xibView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        xibView.xibBackEventView.layer.borderColor = UIColor.lightGray.cgColor
         view.backgroundColor = .systemPurple
     }
+    
+    //MARK: - Methods
+    
+    func configure() {
 
-//MARK: - Methods
+    }
     
 }
 

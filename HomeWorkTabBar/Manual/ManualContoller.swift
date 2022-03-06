@@ -12,7 +12,7 @@ class ManualController: UIViewController {
     
 //MARK: - Properties
 
-    let customView = CustomView(courseEvent: .android, courseName: .andriod, coursePrice: .android)
+    let customView = CustomView(courseEvent: nil, courseName: .ios, coursePrice: .ios)
     
 //MARK: - Life Cycle
     
@@ -42,10 +42,11 @@ class ManualController: UIViewController {
         
         self.view.addSubview(customView.customCourseView)
         
-        customView.customCourseView.addSubview(customView.courseNameLabel)
-        customView.customCourseView.addSubview(customView.moreButton)
-        customView.customCourseView.addSubview(customView.priceLabel)
-        customView.customCourseView.addSubview(customView.blueButton)
+        self.view.addSubview(customView.courseNameLabel)
+        self.view.addSubview(customView.moreButton)
+        self.view.addSubview(customView.priceLabel)
+        self.view.addSubview(customView.blueButton)
+        
     }
     
     func configure() {
@@ -53,10 +54,11 @@ class ManualController: UIViewController {
         customView.customCourseView.frame.size = CGSize(width: 343, height: 174)
         customView.customCourseView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
         
+        customView.courseNameLabel.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY, width: 303, height: 100)
+        customView.moreButton.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY + 80, width: 79, height: 35)
+        customView.priceLabel.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY + 125, width: 69, height: 22)
+        customView.blueButton.frame = CGRect(x: customView.customCourseView.frame.minX + 251, y: customView.customCourseView.frame.minY + 120, width: 72, height: 36)
         
-    
     }
-    
-    
     
 }
