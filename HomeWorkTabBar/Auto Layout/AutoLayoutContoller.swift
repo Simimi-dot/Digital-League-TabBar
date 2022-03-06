@@ -21,7 +21,7 @@ class AutoLayutContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        configureView()
         configureNavigationBar()
         
         customView.blueButton.addTarget(self, action: #selector(pushAutoController), for: .touchUpInside)
@@ -32,21 +32,26 @@ class AutoLayutContoller: UIViewController {
     //MARK: - Methods
     
     func configureNavigationBar() {
-        let someButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pinkColor))
+        self.title = "Auto Layout"
+        
+        let someButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showModalViewController))
         someButton.tintColor = .black
+        
+        let navigationBarAppearence = UINavigationBarAppearance()
+        navigationBarAppearence.configureWithOpaqueBackground()
+        navigationBarAppearence.backgroundColor = .lightGray
+        navigationBarAppearence.shadowColor = .clear
+        
+        
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
         
         navigationItem.rightBarButtonItem = someButton
     }
     
-    @objc
-    func pinkColor() {
-        self.view.backgroundColor = .systemPink
-    }
     
-    func configure() {
-        
-        self.title = "Auto Layout"
-        
+    func configureView() {
         self.view.backgroundColor = .green
         
         self.view.addSubview(customView.customCourseView)
@@ -97,8 +102,15 @@ class AutoLayutContoller: UIViewController {
     }
     
     @objc
+    func showModalViewController() {
+        let ricardoView = RicardoMilosController()
+        ricardoView.view.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.6)
+        navigationController?.present(ricardoView, animated: true, completion: nil)
+    }
+    
+    @objc
     func pushAutoController() {
-        navigationController?.pushViewController(NewController(), animated: true)
+        
     }
     
     

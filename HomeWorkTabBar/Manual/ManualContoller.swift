@@ -32,7 +32,7 @@ class ManualController: UIViewController {
         addView()
         configureNavigationBar()
         
-        self.title = "Manual Controller"
+        self.title = "Manual"
         
         view.backgroundColor = .systemOrange
     }
@@ -43,6 +43,15 @@ class ManualController: UIViewController {
     func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
         button.tintColor = .black
+        
+        let navigationBarAppearence = UINavigationBarAppearance()
+        navigationBarAppearence.configureWithOpaqueBackground()
+        navigationBarAppearence.backgroundColor = .lightGray
+        navigationBarAppearence.shadowColor = .clear
+        
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
         
         navigationItem.rightBarButtonItem = button
     }

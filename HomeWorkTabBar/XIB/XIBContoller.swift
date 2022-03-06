@@ -35,6 +35,15 @@ class XIBContoller: UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
         button.tintColor = .black
         
+        let navigationBarAppearence = UINavigationBarAppearance()
+        navigationBarAppearence.configureWithOpaqueBackground()
+        navigationBarAppearence.backgroundColor = .lightGray
+        navigationBarAppearence.shadowColor = .clear
+        
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        
         navigationItem.rightBarButtonItem = button
     }
     

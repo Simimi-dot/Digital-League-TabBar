@@ -24,6 +24,15 @@ class NavigationContoller: UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: nil)
         button.tintColor = .black
         
+        let navigationBarAppearence = UINavigationBarAppearance()
+        navigationBarAppearence.configureWithOpaqueBackground()
+        navigationBarAppearence.backgroundColor = .lightGray
+        navigationBarAppearence.shadowColor = .clear
+        
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        
         navigationItem.rightBarButtonItem = button
     }
     
