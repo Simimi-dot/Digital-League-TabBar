@@ -21,14 +21,21 @@ class XIBContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        xibView.xibBackEventView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        self.title = "XIB Controller"
+        
+        configureNavigationBar()
+        
         view.backgroundColor = .systemPurple
     }
     
     //MARK: - Methods
     
-    func configure() {
-
+    func configureNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
+        button.tintColor = .black
+        
+        navigationItem.rightBarButtonItem = button
     }
     
 }

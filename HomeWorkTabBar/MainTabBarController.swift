@@ -34,11 +34,11 @@ class MainTabBarController: UITabBarController {
     
     func customizeTabBar() {
         
-        autoLayout.title = "AutoLayout"
+        autoLayout.title = "Auto Layout"
         xib.title = "XIB"
         manual.title = "Manual"
         navigation.title = "Navigation"
-        largeNavigation.title = "LargeNavigation"
+        largeNavigation.title = "Large Navigation"
         
         self.tabBar.tintColor = .black
         self.tabBar.backgroundColor = .systemGray

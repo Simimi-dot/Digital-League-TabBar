@@ -12,8 +12,18 @@ class LargeNavigationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
+        
+        self.title = "Large Navigation"
         
         view.backgroundColor = .systemCyan
+    }
+    
+    func configureNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: nil)
+        button.tintColor = .black
+        
+        navigationItem.rightBarButtonItem = button
     }
     
     

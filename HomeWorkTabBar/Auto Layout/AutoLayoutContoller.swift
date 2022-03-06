@@ -22,13 +22,31 @@ class AutoLayutContoller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        configureNavigationBar()
+        
+        customView.blueButton.addTarget(self, action: #selector(pushAutoController), for: .touchUpInside)
         
         view.backgroundColor = .systemRed
     }
     
     //MARK: - Methods
     
+    func configureNavigationBar() {
+        let someButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pinkColor))
+        someButton.tintColor = .black
+        
+        navigationItem.rightBarButtonItem = someButton
+    }
+    
+    @objc
+    func pinkColor() {
+        self.view.backgroundColor = .systemPink
+    }
+    
     func configure() {
+        
+        self.title = "Auto Layout"
+        
         self.view.backgroundColor = .green
         
         self.view.addSubview(customView.customCourseView)
@@ -76,6 +94,11 @@ class AutoLayutContoller: UIViewController {
             customView.blueButton.trailingAnchor.constraint(equalTo: customView.customCourseView.trailingAnchor, constant: -20),
             customView.blueButton.bottomAnchor.constraint(equalTo: customView.customCourseView.bottomAnchor, constant: -20)
         ])
+    }
+    
+    @objc
+    func pushAutoController() {
+        navigationController?.pushViewController(NewController(), animated: true)
     }
     
     

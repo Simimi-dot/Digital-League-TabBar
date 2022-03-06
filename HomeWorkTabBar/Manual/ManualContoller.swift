@@ -30,6 +30,9 @@ class ManualController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
+        configureNavigationBar()
+        
+        self.title = "Manual Controller"
         
         view.backgroundColor = .systemOrange
     }
@@ -37,6 +40,12 @@ class ManualController: UIViewController {
     
     
 //MARK: - Methods
+    func configureNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
+        button.tintColor = .black
+        
+        navigationItem.rightBarButtonItem = button
+    }
     
     func addView() {
         
