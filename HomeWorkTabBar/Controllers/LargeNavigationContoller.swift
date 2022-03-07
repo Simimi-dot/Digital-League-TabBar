@@ -47,9 +47,24 @@ extension LargeNavigationController {
     @objc
     func moveForward() {
         let newVC = UIViewController()
-        newVC.view.backgroundColor = .red
+        let someView = LargeNavigationView()
+        
         newVC.navigationItem.largeTitleDisplayMode = .never
         
+        newVC.view = someView
+        
+        someView.largeNavigationButton.setTitle("Снова нажми на меня", for: .normal)
+        someView.largeNavigationButton.addTarget(self, action: #selector(moveForwardAgain), for: .touchUpInside)
+        
         navigationController?.pushViewController(newVC, animated: true)
+    }
+    
+    @objc
+    func moveForwardAgain() {
+        let againNewVC = UIViewController()
+        againNewVC.view.backgroundColor = .systemRed
+        againNewVC.navigationItem.largeTitleDisplayMode = .always
+        
+        navigationController?.pushViewController(againNewVC, animated: true)
     }
 }
