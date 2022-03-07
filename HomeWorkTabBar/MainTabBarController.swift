@@ -17,23 +17,16 @@ class MainTabBarController: UITabBarController {
     let navigation = UINavigationController(rootViewController: NavigationContoller())
     let largeNavigation = UINavigationController(rootViewController: LargeNavigationController())
     
-    
     // MARK: - Life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setViewControllers([autoLayout, xib, manual, navigation, largeNavigation], animated: true)
-        
         customizeTabBar()
         customizeTabBarImage()
-        
     }
     
     // MARK: - Methods
-    
     func customizeTabBar() {
-        
         autoLayout.title = "Auto Layout"
         xib.title = "XIB"
         manual.title = "Manual"
@@ -42,12 +35,9 @@ class MainTabBarController: UITabBarController {
         
         self.tabBar.tintColor = .black
         self.tabBar.backgroundColor = .systemGray
-        
-        
     }
     
     func customizeTabBarImage() {
-        
         guard let items = self.tabBar.items else { return }
         
         let arrayOfSystemImages = ["house", "flame", "smoke", "keyboard", "moon"]
@@ -55,10 +45,7 @@ class MainTabBarController: UITabBarController {
         for systemImage in 0..<arrayOfSystemImages.count{
             items[systemImage].image = UIImage(systemName: arrayOfSystemImages[systemImage])
         }
-        
     }
-    
-    
 }
 
 

@@ -7,11 +7,7 @@
 
 import UIKit
 
-//MARK: - Enum
-
 //MARK: - Class
-
-
 class CustomView: UIView {
     
     //MARK: - XIB
@@ -23,13 +19,11 @@ class CustomView: UIView {
     @IBOutlet weak var xibCourseNameLabel: UILabel!
     @IBOutlet weak var xibMoreButton: UIButton!
     @IBOutlet weak var xibPriceLabel: UILabel!
-    @IBOutlet weak var xibBlueButton: UIButton!
+    @IBOutlet weak var xibBlueButton: UIButton?
     
     // Action
     @IBAction func moreButtonAction(_ sender: UIButton) {
         print(#line, #function)
-        
-        
     }
     
     @IBAction func blueButtonAction(_sender: UIButton) {
@@ -118,9 +112,8 @@ class CustomView: UIView {
     
     // MARK: - XIBInit
     
-    init(xibCourseEvent: courseEvent?, xibCourseName: courseName, xibCoursePrice: coursePrise) {
+    init() {
         super.init(frame: .zero)
-        
         setupViews()
         
 //        if let xibCourseEvent = xibCourseEvent {
@@ -139,11 +132,8 @@ class CustomView: UIView {
     
     
     // MARK: - Methods
-    
-    
-    
+
     // MARK: - XIBMethods
-    
     func setupViews() {
         let xibView = loadViewFromXib()
         xibView.frame = self.bounds
@@ -157,7 +147,6 @@ class CustomView: UIView {
             xibView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             xibView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
-    
     }
     
     func loadViewFromXib() -> UIView {
@@ -167,6 +156,4 @@ class CustomView: UIView {
     }
     
 }
-
-//MARK: - Extension
 

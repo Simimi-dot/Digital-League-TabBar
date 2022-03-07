@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		062302FB27D3CBA000FF2905 /* CustomXIBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062302FA27D3CBA000FF2905 /* CustomXIBView.xib */; };
+		06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */; };
 		064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7827D2342D00A3092C /* AppDelegate.swift */; };
 		064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7A27D2342D00A3092C /* SceneDelegate.swift */; };
 		064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7C27D2342D00A3092C /* MainTabBarController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		062302FA27D3CBA000FF2905 /* CustomXIBView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBView.xib; sourceTree = "<group>"; };
+		06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNavigationView.swift; sourceTree = "<group>"; };
 		064DAE7527D2342D00A3092C /* HomeWorkTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064DAE7827D2342D00A3092C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064DAE7A27D2342D00A3092C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				064DAE9527D2437300A3092C /* LargeNavigationContoller.swift */,
+				06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */,
 			);
 			path = LargeNavigation;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */,
 				068BA06E27D5454300A758D6 /* RicardoMilosController.swift in Sources */,
 				064DAEA027D26B9500A3092C /* CustomView.swift in Sources */,
+				06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */,
 				064DAE8D27D2402100A3092C /* AutoLayoutContoller.swift in Sources */,
 				064DAE9027D2433300A3092C /* XIBContoller.swift in Sources */,
 				064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */,

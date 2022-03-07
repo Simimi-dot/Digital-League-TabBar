@@ -10,18 +10,21 @@ import UIKit
 // MARK: - Class
 class NavigationContoller: UIViewController {
     
-    
     // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
-        
-        self.title = "Navigation"
-        
-        configureNavigationBar()
-        
-        view.backgroundColor = .systemYellow
+        navigationItem.largeTitleDisplayMode = .automatic
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Navigation"
+        view.backgroundColor = .systemYellow
+        configureNavigationBar()
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    //MARK: - Methods
     func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: nil)
         button.tintColor = .black
@@ -37,6 +40,4 @@ class NavigationContoller: UIViewController {
         
         navigationItem.rightBarButtonItem = button
     }
-    
-    
 }

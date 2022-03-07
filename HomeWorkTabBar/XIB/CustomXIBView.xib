@@ -84,7 +84,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="blueButtonActionWith_sender:" destination="iN0-l3-epB" eventType="touchUpInside" id="XNB-0E-31R"/>
+                                <action selector="blueButtonActionWith_sender:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xb7-Tp-dye"/>
                             </connections>
                         </button>
                     </subviews>

@@ -12,7 +12,7 @@ class XIBContoller: UIViewController {
     
     //MARK: - Properties
     
-    let xibView = CustomView(xibCourseEvent: .android, xibCourseName: .andriod, xibCoursePrice: .android)
+    let xibView = CustomView()
     
     //MARK: - Life cycle
     override func loadView() {
@@ -21,12 +21,9 @@ class XIBContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
-        
-        
         self.title = "XIB Controller"
-        
         view.backgroundColor = .systemPurple
+        configureNavigationBar()
     }
     
     //MARK: - Methods
@@ -47,13 +44,16 @@ class XIBContoller: UIViewController {
         navigationItem.rightBarButtonItem = button
     }
     
+}
+
+
+//MARK: - Extension @objc
+
+extension XIBContoller {
     @objc
     func showModalViewController() {
         let ricardoView = RicardoMilosController()
         ricardoView.view.backgroundColor = .systemPurple
         navigationController?.present(ricardoView, animated: true, completion: nil)
     }
-    
 }
-
-//MARK: - Extension

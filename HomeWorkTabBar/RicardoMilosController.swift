@@ -12,7 +12,6 @@ import UIKit
 class RicardoMilosController: UIViewController {
     
     //MARK: - Properties
-    
     let ricardoImage: UIImageView = {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -20,17 +19,13 @@ class RicardoMilosController: UIViewController {
     }()
     
     //MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Ricardo"
         configureView()
-        
-        self.title = "Ricarido"
     }
     
     //MARK: - Methods
-    
     func configureView() {
         ricardoImage.image = UIImage(named: "Ricardo")
         
@@ -43,5 +38,4 @@ class RicardoMilosController: UIViewController {
             ricardoImage.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
-    
 }

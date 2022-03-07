@@ -51,7 +51,6 @@ class AutoLayutContoller: UIViewController {
         navigationItem.rightBarButtonItem = someButton
     }
     
-    
     func configureView() {
         self.view.backgroundColor = .green
         
@@ -101,7 +100,11 @@ class AutoLayutContoller: UIViewController {
             customView.blueButton.bottomAnchor.constraint(equalTo: customView.customCourseView.bottomAnchor, constant: -20)
         ])
     }
-    
+}
+
+//MARK: - Extension @objc
+
+extension AutoLayutContoller {
     @objc
     func showModalViewController() {
         let ricardoView = RicardoMilosController()
@@ -122,9 +125,5 @@ class AutoLayutContoller: UIViewController {
         newVC.title = "Подробнее"
         
         navigationController?.pushViewController(newVC, animated: true)
-        
-        
     }
-    
-    
 }

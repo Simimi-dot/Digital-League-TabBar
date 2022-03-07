@@ -18,31 +18,27 @@ class ManualController: UIViewController {
     
     override func loadView() {
         self.view = customView
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        configure()
-        
+        configureView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Manual"
+        view.backgroundColor = .systemOrange
+        
         addView()
         configureNavigationBar()
         
         customView.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
         customView.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
-        
-        self.title = "Manual"
-        
-        view.backgroundColor = .systemOrange
     }
     
-    
-    
     //MARK: - Methods
+    
     func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
@@ -60,18 +56,15 @@ class ManualController: UIViewController {
     }
     
     func addView() {
-        
         self.view.addSubview(customView.customCourseView)
         
         self.view.addSubview(customView.courseNameLabel)
         self.view.addSubview(customView.moreButton)
         self.view.addSubview(customView.priceLabel)
         self.view.addSubview(customView.blueButton)
-        
     }
     
-    func configure() {
-        
+    func configureView() {
         customView.customCourseView.frame.size = CGSize(width: 343, height: 174)
         customView.customCourseView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
         
@@ -79,9 +72,11 @@ class ManualController: UIViewController {
         customView.moreButton.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY + 80, width: 79, height: 35)
         customView.priceLabel.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY + 125, width: 69, height: 22)
         customView.blueButton.frame = CGRect(x: customView.customCourseView.frame.minX + 251, y: customView.customCourseView.frame.minY + 120, width: 72, height: 36)
-        
     }
-    
+}
+
+//MARK: - Extension @objc
+extension ManualController {
     @objc
     func showModalViewController() {
         let ricardoView = RicardoMilosController()
@@ -109,6 +104,4 @@ class ManualController: UIViewController {
         
         self.navigationController?.pushViewController(newVC, animated: true)
     }
-    
-    
 }
