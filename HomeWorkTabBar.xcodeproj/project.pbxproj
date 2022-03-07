@@ -10,6 +10,7 @@
 		062302FB27D3CBA000FF2905 /* CustomXIBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062302FA27D3CBA000FF2905 /* CustomXIBView.xib */; };
 		06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */; };
 		06329DF727D6449C00AA5C5F /* BarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF627D6449C00AA5C5F /* BarAppearance.swift */; };
+		06329E0227D65CEB00AA5C5F /* NewCustomXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329E0127D65CEB00AA5C5F /* NewCustomXIBView.swift */; };
 		064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7827D2342D00A3092C /* AppDelegate.swift */; };
 		064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7A27D2342D00A3092C /* SceneDelegate.swift */; };
 		064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7C27D2342D00A3092C /* MainTabBarController.swift */; };
@@ -29,6 +30,7 @@
 		062302FA27D3CBA000FF2905 /* CustomXIBView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBView.xib; sourceTree = "<group>"; };
 		06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNavigationView.swift; sourceTree = "<group>"; };
 		06329DF627D6449C00AA5C5F /* BarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAppearance.swift; sourceTree = "<group>"; };
+		06329E0127D65CEB00AA5C5F /* NewCustomXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomXIBView.swift; sourceTree = "<group>"; };
 		064DAE7527D2342D00A3092C /* HomeWorkTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064DAE7827D2342D00A3092C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064DAE7A27D2342D00A3092C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,8 +78,9 @@
 			children = (
 				064DAE9F27D26B9500A3092C /* CustomView.swift */,
 				06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */,
-				062302FA27D3CBA000FF2905 /* CustomXIBView.xib */,
 				064DAE8327D2343000A3092C /* LaunchScreen.storyboard */,
+				062302FA27D3CBA000FF2905 /* CustomXIBView.xib */,
+				06329E0127D65CEB00AA5C5F /* NewCustomXIBView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */,
 				064DAE8D27D2402100A3092C /* AutoLayoutContoller.swift in Sources */,
 				064DAE9027D2433300A3092C /* XIBContoller.swift in Sources */,
+				06329E0227D65CEB00AA5C5F /* NewCustomXIBView.swift in Sources */,
 				064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */,
 				064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */,
 				064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */,

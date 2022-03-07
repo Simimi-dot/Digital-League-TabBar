@@ -11,13 +11,12 @@ import UIKit
 class XIBContoller: UIViewController {
     
     //MARK: - Properties
-    
-    let xibView = CustomView()
     let navigationBarAppearance = NavigationBarAppearance()
+    let newXibView = NewCustomXIBView()
     
     //MARK: - Life cycle
     override func loadView() {
-        self.view = xibView
+        self.view = newXibView
     }
     
     override func viewDidLoad() {
@@ -25,6 +24,8 @@ class XIBContoller: UIViewController {
         self.title = "XIB Controller"
         view.backgroundColor = .systemPurple
         configureNavigationBar()
+        moreButton()
+        blueButton()
     }
     
     //MARK: - Methods
@@ -39,8 +40,20 @@ class XIBContoller: UIViewController {
         
         navigationItem.rightBarButtonItem = button
     }
+    
+    func moreButton() {
+        let moreButton = UIButton(frame: CGRect(x: newXibView.frame.minX + 45, y: newXibView.frame.minY + 418, width: 76, height: 17))
+        moreButton.addTarget(self, action: #selector(moveToNextVC), for: .touchUpInside)
+        self.view.addSubview(moreButton)
+    }
+    
+    func blueButton() {
+        let blueButton = UIButton(frame: CGRect(x: newXibView.frame.minX + 275, y: newXibView.frame.minY + 452, width: 72, height: 36))
+        blueButton.addTarget(self, action: #selector(moveToManual), for: .touchUpInside)
+        self.view.addSubview(blueButton)
+    }
+    
 }
-
 
 //MARK: - Extension @objc
 
@@ -50,5 +63,18 @@ extension XIBContoller {
         let ricardoView = RicardoMilosController()
         ricardoView.view.backgroundColor = .systemPurple
         navigationController?.present(ricardoView, animated: true, completion: nil)
+    }
+    
+    @objc
+    func moveToNextVC() {
+        let newVC = UIViewController()
+        newVC.view.backgroundColor = .brown
+
+        navigationController?.pushViewController(newVC, animated: true)
+    }
+    
+    @objc
+    func moveToManual() {
+        self.tabBarController?.selectedIndex = 3
     }
 }

@@ -10,28 +10,7 @@ import UIKit
 //MARK: - Class
 class CustomView: UIView {
     
-    //MARK: - XIB
-    
-    // Outlet
-    @IBOutlet weak var xibCustomCourseView: UIView!
-    @IBOutlet weak var xibCourseEventLabel: UILabel!
-    @IBOutlet weak var xibBackEventView: UIView!
-    @IBOutlet weak var xibCourseNameLabel: UILabel!
-    @IBOutlet weak var xibMoreButton: UIButton!
-    @IBOutlet weak var xibPriceLabel: UILabel!
-    @IBOutlet weak var xibBlueButton: UIButton!
-    
-    // Action
-    @IBAction func moreButtonAction(_ sender: UIButton) {
-        print(#line, #function)
-    }
-    
-    @IBAction func blueButtonAction(_sender: UIButton) {
-        print(#line, #function)
-    }
-    
     // MARK: - Properties
-    
     lazy var customCourseView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -99,7 +78,6 @@ class CustomView: UIView {
     // MARK: - init
     
     init(courseEvent: courseEvent?, courseName: courseName, coursePrice: coursePrise) {
-        
         super.init(frame: .zero)
         
         if let courseEvent = courseEvent {
@@ -110,42 +88,10 @@ class CustomView: UIView {
         self.priceLabel.text = coursePrice.rawValue
     }
     
-    // MARK: - XIBInit
-    
-    init() {
-        super.init(frame: .zero)
-        setupViews()
-    }
-    
     // MARK: - Required Init
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    // MARK: - Methods
-
-    // MARK: - XIBMethods
-    func setupViews() {
-        let xibView = loadViewFromXib()
-        xibView.frame = self.bounds
-        xibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        self.addSubview(xibView)
-        
-        xibView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            xibView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            xibView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-        ])
-    }
-    
-    func loadViewFromXib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "CustomXIBView", bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as! UIView
-    }
-    
 }
 
