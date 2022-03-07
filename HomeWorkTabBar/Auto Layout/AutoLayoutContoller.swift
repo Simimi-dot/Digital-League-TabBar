@@ -46,8 +46,6 @@ class AutoLayutContoller: UIViewController {
     }
     
     func configureView() {
-        self.view.backgroundColor = .green
-        
         self.view.addSubview(customView.customCourseView)
         
         customView.customCourseView.addSubview(customView.courseEventLabel)

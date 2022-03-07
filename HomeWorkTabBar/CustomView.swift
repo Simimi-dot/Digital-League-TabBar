@@ -19,7 +19,7 @@ class CustomView: UIView {
     @IBOutlet weak var xibCourseNameLabel: UILabel!
     @IBOutlet weak var xibMoreButton: UIButton!
     @IBOutlet weak var xibPriceLabel: UILabel!
-    @IBOutlet weak var xibBlueButton: UIButton?
+    @IBOutlet weak var xibBlueButton: UIButton!
     
     // Action
     @IBAction func moreButtonAction(_ sender: UIButton) {
@@ -115,21 +115,13 @@ class CustomView: UIView {
     init() {
         super.init(frame: .zero)
         setupViews()
-        
-//        if let xibCourseEvent = xibCourseEvent {
-//            self.courseEventLabel.text = xibCourseEvent.rawValue
-//        }
-//        
-//        self.courseNameLabel.text = xibCourseName.rawValue
-//        self.priceLabel.text = xibCoursePrice.rawValue
-//
     }
     
     // MARK: - Required Init
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
     
     // MARK: - Methods
 

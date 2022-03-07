@@ -8,7 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="HomeWorkTabBar" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="HomeWorkTabBar" customModuleProvider="target">
+            <connections>
+                <outlet property="xibBackEventView" destination="gB6-g0-Jmn" id="7aj-1B-Z9b"/>
+                <outlet property="xibBlueButton" destination="aMt-zO-yTs" id="ueb-5g-BOy"/>
+                <outlet property="xibCourseEventLabel" destination="8xi-Jf-swp" id="435-v5-cp1"/>
+                <outlet property="xibCourseNameLabel" destination="hJv-sY-zTg" id="Cm7-bO-kEf"/>
+                <outlet property="xibCustomCourseView" destination="QY7-Wf-CkR" id="yV8-pW-VvP"/>
+                <outlet property="xibMoreButton" destination="et8-8L-IIK" id="43u-ye-hMf"/>
+                <outlet property="xibPriceLabel" destination="pft-5R-zyr" id="b8k-tU-I6C"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView" customModule="HomeWorkTabBar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="174"/>
@@ -61,7 +71,7 @@
                                 <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="14"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="moreButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="XUe-2x-btj"/>
+                                <action selector="moreButtonAction:" destination="-1" eventType="touchUpInside" id="uvP-M1-vYU"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMt-zO-yTs">
@@ -84,7 +94,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="blueButtonActionWith_sender:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xb7-Tp-dye"/>
+                                <action selector="blueButtonActionWith_sender:" destination="-1" eventType="touchUpInside" id="4HQ-wg-nUv"/>
                             </connections>
                         </button>
                     </subviews>
@@ -133,15 +143,6 @@
                     <integer key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <connections>
-                <outlet property="xibBackEventView" destination="gB6-g0-Jmn" id="AQS-li-c1C"/>
-                <outlet property="xibBlueButton" destination="aMt-zO-yTs" id="kaW-MG-UYZ"/>
-                <outlet property="xibCourseEventLabel" destination="8xi-Jf-swp" id="aI9-jR-d8x"/>
-                <outlet property="xibCourseNameLabel" destination="hJv-sY-zTg" id="s9X-9G-Hyo"/>
-                <outlet property="xibCustomCourseView" destination="QY7-Wf-CkR" id="DK3-pP-AdF"/>
-                <outlet property="xibMoreButton" destination="et8-8L-IIK" id="Ugw-o4-oY3"/>
-                <outlet property="xibPriceLabel" destination="pft-5R-zyr" id="aT2-AP-jKY"/>
-            </connections>
             <point key="canvasLocation" x="-148" y="17"/>
         </view>
     </objects>
