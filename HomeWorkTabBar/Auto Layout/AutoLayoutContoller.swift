@@ -24,7 +24,8 @@ class AutoLayutContoller: UIViewController {
         configureView()
         configureNavigationBar()
         
-        customView.blueButton.addTarget(self, action: #selector(pushAutoController), for: .touchUpInside)
+        customView.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
+        customView.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
         
         view.backgroundColor = .systemRed
     }
@@ -109,7 +110,19 @@ class AutoLayutContoller: UIViewController {
     }
     
     @objc
-    func pushAutoController() {
+    func switchTabBar() {
+        tabBarController?.selectedIndex = 3
+    }
+    
+    @objc
+    func newViewController() {
+        let newVC = UIViewController()
+        
+        newVC.view.backgroundColor = .systemCyan
+        newVC.title = "Подробнее"
+        
+        navigationController?.pushViewController(newVC, animated: true)
+        
         
     }
     

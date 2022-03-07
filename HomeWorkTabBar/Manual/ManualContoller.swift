@@ -10,11 +10,11 @@ import UIKit
 //MARK: - Class
 class ManualController: UIViewController {
     
-//MARK: - Properties
-
+    //MARK: - Properties
+    
     let customView = CustomView(courseEvent: nil, courseName: .ios, coursePrice: .ios)
     
-//MARK: - Life Cycle
+    //MARK: - Life Cycle
     
     override func loadView() {
         self.view = customView
@@ -32,6 +32,9 @@ class ManualController: UIViewController {
         addView()
         configureNavigationBar()
         
+        customView.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
+        customView.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
+        
         self.title = "Manual"
         
         view.backgroundColor = .systemOrange
@@ -39,9 +42,9 @@ class ManualController: UIViewController {
     
     
     
-//MARK: - Methods
+    //MARK: - Methods
     func configureNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
+        let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
         
         let navigationBarAppearence = UINavigationBarAppearance()
@@ -78,5 +81,34 @@ class ManualController: UIViewController {
         customView.blueButton.frame = CGRect(x: customView.customCourseView.frame.minX + 251, y: customView.customCourseView.frame.minY + 120, width: 72, height: 36)
         
     }
+    
+    @objc
+    func showModalViewController() {
+        let ricardoView = RicardoMilosController()
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
+        
+        ricardoView.view.backgroundColor = .systemOrange
+        
+        ricardoView.navigationItem.leftBarButtonItem = cancelButton
+        cancelButton.tintColor = .black
+        
+        navigationController?.present(UINavigationController(rootViewController: ricardoView), animated: true, completion: nil)
+    }
+    
+    @objc
+    func switchTabBar() {
+        tabBarController?.selectedIndex = 3
+    }
+    
+    @objc
+    func newViewController() {
+        let newVC = UIViewController()
+        
+        newVC.view.backgroundColor = .systemGreen
+        newVC.title = "Подробнее"
+        
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
+    
     
 }

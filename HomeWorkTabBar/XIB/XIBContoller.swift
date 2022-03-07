@@ -21,10 +21,10 @@ class XIBContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
+        
         
         self.title = "XIB Controller"
-        
-        configureNavigationBar()
         
         view.backgroundColor = .systemPurple
     }
@@ -32,7 +32,7 @@ class XIBContoller: UIViewController {
     //MARK: - Methods
     
     func configureNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
+        let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
         
         let navigationBarAppearence = UINavigationBarAppearance()
@@ -45,6 +45,13 @@ class XIBContoller: UIViewController {
         navigationController?.navigationBar.compactAppearance = navigationBarAppearence
         
         navigationItem.rightBarButtonItem = button
+    }
+    
+    @objc
+    func showModalViewController() {
+        let ricardoView = RicardoMilosController()
+        ricardoView.view.backgroundColor = .systemPurple
+        navigationController?.present(ricardoView, animated: true, completion: nil)
     }
     
 }

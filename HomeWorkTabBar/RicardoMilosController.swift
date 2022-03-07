@@ -25,13 +25,13 @@ class RicardoMilosController: UIViewController {
         super.viewDidLoad()
         
         configureView()
+        
+        self.title = "Ricarido"
     }
     
     //MARK: - Methods
     
     func configureView() {
-        
-    
         ricardoImage.image = UIImage(named: "Ricardo")
         
         self.view.addSubview(ricardoImage)
