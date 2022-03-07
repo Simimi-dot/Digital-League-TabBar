@@ -13,9 +13,9 @@ class ManualController: UIViewController {
     //MARK: - Properties
     
     let customView = CustomView(courseEvent: nil, courseName: .ios, coursePrice: .ios)
+    let navigationBarAppearance = NavigationBarAppearance()
     
     //MARK: - Life Cycle
-    
     override func loadView() {
         self.view = customView
     }
@@ -38,26 +38,19 @@ class ManualController: UIViewController {
     }
     
     //MARK: - Methods
-    
     func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
         
-        let navigationBarAppearence = UINavigationBarAppearance()
-        navigationBarAppearence.configureWithOpaqueBackground()
-        navigationBarAppearence.backgroundColor = .lightGray
-        navigationBarAppearence.shadowColor = .clear
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
         
         navigationItem.rightBarButtonItem = button
     }
     
     func addView() {
         self.view.addSubview(customView.customCourseView)
-        
         self.view.addSubview(customView.courseNameLabel)
         self.view.addSubview(customView.moreButton)
         self.view.addSubview(customView.priceLabel)

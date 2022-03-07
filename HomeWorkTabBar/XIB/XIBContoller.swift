@@ -13,6 +13,7 @@ class XIBContoller: UIViewController {
     //MARK: - Properties
     
     let xibView = CustomView()
+    let navigationBarAppearance = NavigationBarAppearance()
     
     //MARK: - Life cycle
     override func loadView() {
@@ -32,18 +33,12 @@ class XIBContoller: UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
         
-        let navigationBarAppearence = UINavigationBarAppearance()
-        navigationBarAppearence.configureWithOpaqueBackground()
-        navigationBarAppearence.backgroundColor = .lightGray
-        navigationBarAppearence.shadowColor = .clear
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
         
         navigationItem.rightBarButtonItem = button
     }
-    
 }
 
 

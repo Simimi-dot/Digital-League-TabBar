@@ -13,6 +13,7 @@ class LargeNavigationController: UIViewController {
     //MARK: - Properties
     
     let largeNavigationView = LargeNavigationView()
+    let navigationBarAppearance = NavigationBarAppearance()
     
     //MARK: - Life cycle
     override func loadView() {
@@ -33,14 +34,9 @@ class LargeNavigationController: UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: nil)
         button.tintColor = .black
         
-        let navigationBarAppearence = UINavigationBarAppearance()
-        navigationBarAppearence.configureWithOpaqueBackground()
-        navigationBarAppearence.backgroundColor = .lightGray
-        navigationBarAppearence.shadowColor = .clear
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
         
         navigationItem.rightBarButtonItem = button
     }

@@ -10,6 +10,9 @@ import UIKit
 // MARK: - Class
 class NavigationContoller: UIViewController {
     
+    //MARK: - Properties
+    let navigationBarAppearance = NavigationBarAppearance()
+    
     // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
@@ -29,14 +32,9 @@ class NavigationContoller: UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: nil)
         button.tintColor = .black
         
-        let navigationBarAppearence = UINavigationBarAppearance()
-        navigationBarAppearence.configureWithOpaqueBackground()
-        navigationBarAppearence.backgroundColor = .lightGray
-        navigationBarAppearence.shadowColor = .clear
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
         
         navigationItem.rightBarButtonItem = button
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		062302FB27D3CBA000FF2905 /* CustomXIBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062302FA27D3CBA000FF2905 /* CustomXIBView.xib */; };
 		06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */; };
+		06329DF727D6449C00AA5C5F /* BarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF627D6449C00AA5C5F /* BarAppearance.swift */; };
 		064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7827D2342D00A3092C /* AppDelegate.swift */; };
 		064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7A27D2342D00A3092C /* SceneDelegate.swift */; };
 		064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7C27D2342D00A3092C /* MainTabBarController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		062302FA27D3CBA000FF2905 /* CustomXIBView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBView.xib; sourceTree = "<group>"; };
 		06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNavigationView.swift; sourceTree = "<group>"; };
+		06329DF627D6449C00AA5C5F /* BarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAppearance.swift; sourceTree = "<group>"; };
 		064DAE7527D2342D00A3092C /* HomeWorkTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064DAE7827D2342D00A3092C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064DAE7A27D2342D00A3092C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				064DAE9F27D26B9500A3092C /* CustomView.swift */,
 				064DAE7C27D2342D00A3092C /* MainTabBarController.swift */,
 				068BA06D27D5454300A758D6 /* RicardoMilosController.swift */,
+				06329DF627D6449C00AA5C5F /* BarAppearance.swift */,
 				064DAE8E27D2430F00A3092C /* Auto Layout */,
 				064DAE9727D2437900A3092C /* XIB */,
 				064DAE9827D2438200A3092C /* Manual */,
@@ -211,6 +214,7 @@
 			files = (
 				068BA06827D4DC9C00A758D6 /* CourseEnum.swift in Sources */,
 				064DAE9427D2435E00A3092C /* NavigationContoller.swift in Sources */,
+				06329DF727D6449C00AA5C5F /* BarAppearance.swift in Sources */,
 				064DAE9227D2434C00A3092C /* ManualContoller.swift in Sources */,
 				064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */,
 				068BA06E27D5454300A758D6 /* RicardoMilosController.swift in Sources */,

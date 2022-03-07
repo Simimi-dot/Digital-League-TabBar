@@ -13,6 +13,7 @@ class AutoLayutContoller: UIViewController {
     
     //MARK: - Properties
     let customView = CustomView(courseEvent: .backend, courseName: .backend, coursePrice: .backend)
+    let navigationBarAppearance = NavigationBarAppearance()
     
     //MARK: - Life Cycle
     override func loadView() {
@@ -21,32 +22,25 @@ class AutoLayutContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Auto Layout"
+        view.backgroundColor = .systemRed
+        
         configureView()
         configureNavigationBar()
         
         customView.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
         customView.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
-        
-        view.backgroundColor = .systemRed
     }
     
     //MARK: - Methods
     
     func configureNavigationBar() {
-        self.title = "Auto Layout"
-        
         let someButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showModalViewController))
         someButton.tintColor = .black
         
-        let navigationBarAppearence = UINavigationBarAppearance()
-        navigationBarAppearence.configureWithOpaqueBackground()
-        navigationBarAppearence.backgroundColor = .lightGray
-        navigationBarAppearence.shadowColor = .clear
-        
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearence
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearence
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearence
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
         
         navigationItem.rightBarButtonItem = someButton
     }
