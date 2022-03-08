@@ -14,6 +14,24 @@ class XIBContoller: UIViewController {
     let navigationBarAppearance = NavigationBarAppearance()
     let newXibView = NewCustomXIBView()
     
+    lazy var moreButton: UIButton = {
+        var button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.addTarget(self, action: #selector(moveToNextVC), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var blueButton: UIButton = {
+       var button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("", for: .normal)
+        button.setTitleColor(.orange, for: .normal)
+        button.addTarget(self, action: #selector(moveToManual), for: .touchUpInside)
+        return button
+    }()
+    
     //MARK: - Life cycle
     override func loadView() {
         self.view = newXibView
@@ -24,8 +42,7 @@ class XIBContoller: UIViewController {
         self.title = "XIB Controller"
         view.backgroundColor = .systemPurple
         configureNavigationBar()
-        moreButton()
-        blueButton()
+        configureButtons()
     }
     
     //MARK: - Methods
@@ -41,18 +58,23 @@ class XIBContoller: UIViewController {
         navigationItem.rightBarButtonItem = button
     }
     
-    func moreButton() {
-        let moreButton = UIButton(frame: CGRect(x: newXibView.frame.minX + 45, y: newXibView.frame.minY + 418, width: 76, height: 17))
-        moreButton.addTarget(self, action: #selector(moveToNextVC), for: .touchUpInside)
-        self.view.addSubview(moreButton)
+    func configureButtons() {
+        newXibView.addSubview(moreButton)
+        newXibView.addSubview(blueButton)
+        
+        NSLayoutConstraint.activate([
+            moreButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 82),
+            moreButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 20),
+            moreButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -244),
+            moreButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -72),
+            
+            blueButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 118),
+            blueButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 251),
+            blueButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -20),
+            blueButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -20)
+        ])
+        
     }
-    
-    func blueButton() {
-        let blueButton = UIButton(frame: CGRect(x: newXibView.frame.minX + 275, y: newXibView.frame.minY + 452, width: 72, height: 36))
-        blueButton.addTarget(self, action: #selector(moveToManual), for: .touchUpInside)
-        self.view.addSubview(blueButton)
-    }
-    
 }
 
 //MARK: - Extension @objc
