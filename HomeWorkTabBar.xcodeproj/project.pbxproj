@@ -29,6 +29,9 @@
 		06898B7627D7573E00AEF8E0 /* CustomXIBButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06898B7527D7573E00AEF8E0 /* CustomXIBButtons.swift */; };
 		068BA06827D4DC9C00A758D6 /* CourseEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068BA06727D4DC9C00A758D6 /* CourseEnum.swift */; };
 		068BA06E27D5454300A758D6 /* RicardoMilosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068BA06D27D5454300A758D6 /* RicardoMilosController.swift */; };
+		06FCA08027D79E750066A518 /* ConfigureViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA07F27D79E750066A518 /* ConfigureViewProtocol.swift */; };
+		06FCA08227D7A0D80066A518 /* RicardoMilosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08127D7A0D80066A518 /* RicardoMilosView.swift */; };
+		06FCA08427D7A1EC0066A518 /* RicardoMilosController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08327D7A1EC0066A518 /* RicardoMilosController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		06898B7527D7573E00AEF8E0 /* CustomXIBButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXIBButtons.swift; sourceTree = "<group>"; };
 		068BA06727D4DC9C00A758D6 /* CourseEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEnum.swift; sourceTree = "<group>"; };
 		068BA06D27D5454300A758D6 /* RicardoMilosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicardoMilosController.swift; sourceTree = "<group>"; };
+		06FCA07F27D79E750066A518 /* ConfigureViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewProtocol.swift; sourceTree = "<group>"; };
+		06FCA08127D7A0D80066A518 /* RicardoMilosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicardoMilosView.swift; sourceTree = "<group>"; };
+		06FCA08327D7A1EC0066A518 /* RicardoMilosController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RicardoMilosController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 				062302FA27D3CBA000FF2905 /* CustomXIBView.xib */,
 				06329E0127D65CEB00AA5C5F /* CustomXIBView.swift */,
 				06898B7527D7573E00AEF8E0 /* CustomXIBButtons.swift */,
+				06FCA08127D7A0D80066A518 /* RicardoMilosView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				06329E0027D6519F00AA5C5F /* Supporting Files */,
-				0665C4DF27D77109008E3572 /* Protocol */,
+				0665C4DF27D77109008E3572 /* Model */,
 				06329DFF27D6515700AA5C5F /* View */,
 				06329DFE27D6513500AA5C5F /* Controllers */,
 				0665C4E227D77216008E3572 /* Extension */,
@@ -137,12 +144,13 @@
 			path = HomeWorkTabBar;
 			sourceTree = "<group>";
 		};
-		0665C4DF27D77109008E3572 /* Protocol */ = {
+		0665C4DF27D77109008E3572 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				0665C4E027D77140008E3572 /* ButtonsActionProtocol.swift */,
+				06FCA07F27D79E750066A518 /* ConfigureViewProtocol.swift */,
 			);
-			path = Protocol;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0665C4E227D77216008E3572 /* Extension */ = {
@@ -151,6 +159,7 @@
 				0665C4E327D77249008E3572 /* AutoLayoutController+Extension.swift */,
 				0665C4E527D772F2008E3572 /* XIBController+Extension.swift */,
 				0665C4E727D77345008E3572 /* ManualController+Extension.swift */,
+				06FCA08327D7A1EC0066A518 /* RicardoMilosController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -227,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				068BA06827D4DC9C00A758D6 /* CourseEnum.swift in Sources */,
+				06FCA08027D79E750066A518 /* ConfigureViewProtocol.swift in Sources */,
 				064DAE9427D2435E00A3092C /* NavigationContoller.swift in Sources */,
+				06FCA08227D7A0D80066A518 /* RicardoMilosView.swift in Sources */,
 				06329DF727D6449C00AA5C5F /* BarAppearance.swift in Sources */,
 				0665C4E627D772F2008E3572 /* XIBController+Extension.swift in Sources */,
 				064DAE9227D2434C00A3092C /* ManualContoller.swift in Sources */,
@@ -243,6 +254,7 @@
 				064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */,
 				06898B7627D7573E00AEF8E0 /* CustomXIBButtons.swift in Sources */,
 				064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */,
+				06FCA08427D7A1EC0066A518 /* RicardoMilosController+Extension.swift in Sources */,
 				064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */,
 				0665C4E827D77345008E3572 /* ManualController+Extension.swift in Sources */,
 			);

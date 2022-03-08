@@ -8,6 +8,8 @@
 import UIKit
 
 //MARK: - Extension
+
+// ButtonsActionProtocol
 extension XIBContoller: ButtonsActionProtocol {
     @objc
     internal func showModalViewController() {
@@ -28,5 +30,24 @@ extension XIBContoller: ButtonsActionProtocol {
 
         navigationController?.pushViewController(newVC, animated: true)
     }
-    
+}
+
+// ConfigureViewProtocol
+extension XIBContoller: ConfigureViewProtocol {
+    internal func configureView() {
+        newXibView.addSubview(xibButtons.moreButton)
+        newXibView.addSubview(xibButtons.blueButton)
+        
+        NSLayoutConstraint.activate([
+            xibButtons.moreButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 82),
+            xibButtons.moreButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 20),
+            xibButtons.moreButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -244),
+            xibButtons.moreButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -72),
+            
+            xibButtons.blueButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 118),
+            xibButtons.blueButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 251),
+            xibButtons.blueButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -20),
+            xibButtons.blueButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -20)
+        ])
+    }
 }

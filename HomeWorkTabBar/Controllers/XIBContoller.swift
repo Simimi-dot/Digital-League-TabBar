@@ -25,7 +25,7 @@ class XIBContoller: UIViewController {
         self.title = "XIB Controller"
         view.backgroundColor = .systemPurple
         configureNavigationBar()
-        configureButtons()
+        configureView()
         
         xibButtons.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
         xibButtons.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
@@ -43,22 +43,6 @@ class XIBContoller: UIViewController {
         
         navigationItem.rightBarButtonItem = button
     }
-    
-    private func configureButtons() {
-        newXibView.addSubview(xibButtons.moreButton)
-        newXibView.addSubview(xibButtons.blueButton)
-        
-        NSLayoutConstraint.activate([
-            xibButtons.moreButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 82),
-            xibButtons.moreButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 20),
-            xibButtons.moreButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -244),
-            xibButtons.moreButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -72),
-            
-            xibButtons.blueButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 118),
-            xibButtons.blueButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 251),
-            xibButtons.blueButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -20),
-            xibButtons.blueButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -20)
-        ])
-        
-    }
 }
+
+

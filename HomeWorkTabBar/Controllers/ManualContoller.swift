@@ -49,21 +49,6 @@ class ManualController: UIViewController {
         navigationItem.rightBarButtonItem = button
     }
     
-    private func addView() {
-        self.view.addSubview(customView.customCourseView)
-        self.view.addSubview(customView.courseNameLabel)
-        self.view.addSubview(customView.moreButton)
-        self.view.addSubview(customView.priceLabel)
-        self.view.addSubview(customView.blueButton)
-    }
     
-    private func configureView() {
-        customView.customCourseView.frame.size = CGSize(width: 343, height: 174)
-        customView.customCourseView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
-        
-        customView.courseNameLabel.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY, width: 303, height: 100)
-        customView.moreButton.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY + 80, width: 79, height: 35)
-        customView.priceLabel.frame = CGRect(x: customView.customCourseView.frame.minX + 20, y: customView.customCourseView.frame.minY + 125, width: 69, height: 22)
-        customView.blueButton.frame = CGRect(x: customView.customCourseView.frame.minX + 251, y: customView.customCourseView.frame.minY + 120, width: 72, height: 36)
-    }
+    
 }
