@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-//MARK: - Class
+//MARK: - Struct
 struct NavigationBarAppearance {
     //MARK: - Methods
     func barAppearance() -> UINavigationBarAppearance {

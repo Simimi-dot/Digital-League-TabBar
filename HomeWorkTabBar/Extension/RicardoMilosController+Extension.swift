@@ -11,8 +11,6 @@ import UIKit
 
 // ConfigureViewProtocol
 extension RicardoMilosController: ConfigureViewProtocol {
-    //MARK: - Methods
-    
     internal func configureView() {
         ricardoView.ricardoImage.image = UIImage(named: "Ricardo")
         

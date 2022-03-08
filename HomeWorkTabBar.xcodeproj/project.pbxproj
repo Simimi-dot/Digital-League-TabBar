@@ -32,6 +32,9 @@
 		06FCA08027D79E750066A518 /* ConfigureViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA07F27D79E750066A518 /* ConfigureViewProtocol.swift */; };
 		06FCA08227D7A0D80066A518 /* RicardoMilosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08127D7A0D80066A518 /* RicardoMilosView.swift */; };
 		06FCA08427D7A1EC0066A518 /* RicardoMilosController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08327D7A1EC0066A518 /* RicardoMilosController+Extension.swift */; };
+		06FCA08627D7A4720066A518 /* СonfigureNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08527D7A4720066A518 /* СonfigureNavigationBarProtocol.swift */; };
+		06FCA08827D7A5FA0066A518 /* NavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08727D7A5FA0066A518 /* NavigationController+Extension.swift */; };
+		06FCA08A27D7A6510066A518 /* LargeNavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA08927D7A6510066A518 /* LargeNavigationController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		06FCA07F27D79E750066A518 /* ConfigureViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewProtocol.swift; sourceTree = "<group>"; };
 		06FCA08127D7A0D80066A518 /* RicardoMilosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicardoMilosView.swift; sourceTree = "<group>"; };
 		06FCA08327D7A1EC0066A518 /* RicardoMilosController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RicardoMilosController+Extension.swift"; sourceTree = "<group>"; };
+		06FCA08527D7A4720066A518 /* СonfigureNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СonfigureNavigationBarProtocol.swift"; sourceTree = "<group>"; };
+		06FCA08727D7A5FA0066A518 /* NavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Extension.swift"; sourceTree = "<group>"; };
+		06FCA08927D7A6510066A518 /* LargeNavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LargeNavigationController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +144,6 @@
 				06329DFF27D6515700AA5C5F /* View */,
 				06329DFE27D6513500AA5C5F /* Controllers */,
 				0665C4E227D77216008E3572 /* Extension */,
-				068BA06727D4DC9C00A758D6 /* CourseEnum.swift */,
-				06329DF627D6449C00AA5C5F /* BarAppearance.swift */,
 			);
 			path = HomeWorkTabBar;
 			sourceTree = "<group>";
@@ -149,6 +153,9 @@
 			children = (
 				0665C4E027D77140008E3572 /* ButtonsActionProtocol.swift */,
 				06FCA07F27D79E750066A518 /* ConfigureViewProtocol.swift */,
+				06FCA08527D7A4720066A518 /* СonfigureNavigationBarProtocol.swift */,
+				068BA06727D4DC9C00A758D6 /* CourseEnum.swift */,
+				06329DF627D6449C00AA5C5F /* BarAppearance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				0665C4E327D77249008E3572 /* AutoLayoutController+Extension.swift */,
 				0665C4E527D772F2008E3572 /* XIBController+Extension.swift */,
 				0665C4E727D77345008E3572 /* ManualController+Extension.swift */,
+				06FCA08727D7A5FA0066A518 /* NavigationController+Extension.swift */,
+				06FCA08927D7A6510066A518 /* LargeNavigationController+Extension.swift */,
 				06FCA08327D7A1EC0066A518 /* RicardoMilosController+Extension.swift */,
 			);
 			path = Extension;
@@ -244,6 +253,7 @@
 				064DAE9227D2434C00A3092C /* ManualContoller.swift in Sources */,
 				064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */,
 				0665C4E127D77140008E3572 /* ButtonsActionProtocol.swift in Sources */,
+				06FCA08627D7A4720066A518 /* СonfigureNavigationBarProtocol.swift in Sources */,
 				0665C4E427D77249008E3572 /* AutoLayoutController+Extension.swift in Sources */,
 				068BA06E27D5454300A758D6 /* RicardoMilosController.swift in Sources */,
 				064DAEA027D26B9500A3092C /* CustomView.swift in Sources */,
@@ -253,9 +263,11 @@
 				06329E0227D65CEB00AA5C5F /* CustomXIBView.swift in Sources */,
 				064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */,
 				06898B7627D7573E00AEF8E0 /* CustomXIBButtons.swift in Sources */,
+				06FCA08827D7A5FA0066A518 /* NavigationController+Extension.swift in Sources */,
 				064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */,
 				06FCA08427D7A1EC0066A518 /* RicardoMilosController+Extension.swift in Sources */,
 				064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */,
+				06FCA08A27D7A6510066A518 /* LargeNavigationController+Extension.swift in Sources */,
 				0665C4E827D77345008E3572 /* ManualController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

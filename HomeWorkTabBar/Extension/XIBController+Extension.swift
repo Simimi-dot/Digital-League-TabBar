@@ -51,3 +51,17 @@ extension XIBContoller: ConfigureViewProtocol {
         ])
     }
 }
+
+// ConfigureNavigationBarProtocol
+extension XIBContoller: ConfigureNavigationBarProtocol {
+    internal func configureNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showModalViewController))
+        button.tintColor = .black
+        
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
+        
+        navigationItem.rightBarButtonItem = button
+    }
+}

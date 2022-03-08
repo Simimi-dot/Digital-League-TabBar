@@ -26,16 +26,4 @@ class NavigationContoller: UIViewController {
         configureNavigationBar()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
-    //MARK: - Methods
-    private func configureNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: nil)
-        button.tintColor = .black
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
-        
-        navigationItem.rightBarButtonItem = button
-    }
 }

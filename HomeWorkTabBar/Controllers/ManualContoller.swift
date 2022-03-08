@@ -36,19 +36,4 @@ class ManualController: UIViewController {
         customView.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
         customView.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
     }
-    
-    //MARK: - Methods
-    private func configureNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showModalViewController))
-        button.tintColor = .black
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
-        
-        navigationItem.rightBarButtonItem = button
-    }
-    
-    
-    
 }

@@ -60,3 +60,17 @@ extension ManualController: ConfigureViewProtocol {
         customView.blueButton.frame = CGRect(x: customView.customCourseView.frame.minX + 251, y: customView.customCourseView.frame.minY + 120, width: 72, height: 36)
     }
 }
+
+// ConfigureNavigationBarProtocol
+extension ManualController: ConfigureNavigationBarProtocol {
+    internal func configureNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showModalViewController))
+        button.tintColor = .black
+        
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
+        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
+        
+        navigationItem.rightBarButtonItem = button
+    }
+}

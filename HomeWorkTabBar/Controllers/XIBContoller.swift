@@ -30,19 +30,6 @@ class XIBContoller: UIViewController {
         xibButtons.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
         xibButtons.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
     }
-    
-    //MARK: - Methods
-    
-    private func configureNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showModalViewController))
-        button.tintColor = .black
-        
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance.barAppearance()
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance.barAppearance()
-        navigationController?.navigationBar.compactAppearance = navigationBarAppearance.barAppearance()
-        
-        navigationItem.rightBarButtonItem = button
-    }
 }
 
 
