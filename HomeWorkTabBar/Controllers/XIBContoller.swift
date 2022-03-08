@@ -27,8 +27,8 @@ class XIBContoller: UIViewController {
         configureNavigationBar()
         configureButtons()
         
-        xibButtons.moreButton.addTarget(self, action: #selector(moveToNextVC), for: .touchUpInside)
-        xibButtons.blueButton.addTarget(self, action: #selector(moveToManual), for: .touchUpInside)
+        xibButtons.moreButton.addTarget(self, action: #selector(newViewController), for: .touchUpInside)
+        xibButtons.blueButton.addTarget(self, action: #selector(switchTabBar), for: .touchUpInside)
     }
     
     //MARK: - Methods
@@ -60,29 +60,5 @@ class XIBContoller: UIViewController {
             xibButtons.blueButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -20)
         ])
         
-    }
-}
-
-//MARK: - Extension @objc
-
-extension XIBContoller {
-    @objc
-    private func showModalViewController() {
-        let ricardoView = RicardoMilosController()
-        ricardoView.view.backgroundColor = .systemPurple
-        navigationController?.present(ricardoView, animated: true, completion: nil)
-    }
-    
-    @objc
-    private func moveToNextVC() {
-        let newVC = UIViewController()
-        newVC.view.backgroundColor = .brown
-
-        navigationController?.pushViewController(newVC, animated: true)
-    }
-    
-    @objc
-    private func moveToManual() {
-        self.tabBarController?.selectedIndex = 3
     }
 }

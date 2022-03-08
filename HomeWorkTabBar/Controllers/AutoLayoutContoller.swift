@@ -93,29 +93,3 @@ class AutoLayutContoller: UIViewController {
         ])
     }
 }
-
-//MARK: - Extension @objc
-
-extension AutoLayutContoller {
-    @objc
-    private func showModalViewController() {
-        let ricardoView = RicardoMilosController()
-        ricardoView.view.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.6)
-        navigationController?.present(ricardoView, animated: true, completion: nil)
-    }
-    
-    @objc
-    private func switchTabBar() {
-        tabBarController?.selectedIndex = 3
-    }
-    
-    @objc
-    private func newViewController() {
-        let newVC = UIViewController()
-        
-        newVC.view.backgroundColor = .systemCyan
-        newVC.title = "Подробнее"
-        
-        navigationController?.pushViewController(newVC, animated: true)
-    }
-}

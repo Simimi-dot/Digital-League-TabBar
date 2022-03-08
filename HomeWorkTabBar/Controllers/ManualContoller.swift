@@ -67,34 +67,3 @@ class ManualController: UIViewController {
         customView.blueButton.frame = CGRect(x: customView.customCourseView.frame.minX + 251, y: customView.customCourseView.frame.minY + 120, width: 72, height: 36)
     }
 }
-
-//MARK: - Extension @objc
-extension ManualController {
-    @objc
-    private func showModalViewController() {
-        let ricardoView = RicardoMilosController()
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
-        
-        ricardoView.view.backgroundColor = .systemOrange
-        
-        ricardoView.navigationItem.leftBarButtonItem = cancelButton
-        cancelButton.tintColor = .black
-        
-        navigationController?.present(UINavigationController(rootViewController: ricardoView), animated: true, completion: nil)
-    }
-    
-    @objc
-    private func switchTabBar() {
-        tabBarController?.selectedIndex = 3
-    }
-    
-    @objc
-    private func newViewController() {
-        let newVC = UIViewController()
-        
-        newVC.view.backgroundColor = .systemGreen
-        newVC.title = "Подробнее"
-        
-        self.navigationController?.pushViewController(newVC, animated: true)
-    }
-}
