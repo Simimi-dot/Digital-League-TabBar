@@ -1,5 +1,5 @@
 //
-//  NewCustomXIBView.swift
+//  CustomXIBView.swift
 //  HomeWorkTabBar
 //
 //  Created by Егор Астахов on 07.03.2022.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 //MARK: - Class
-class NewCustomXIBView: UIView {
+class CustomXIBView: UIView {
     @IBOutlet weak var newXibCouseView: UIView!
     @IBOutlet weak var newXibCourseEventLabel: UILabel!
     @IBOutlet weak var newXibBackEventView: UIView!
@@ -29,7 +29,7 @@ class NewCustomXIBView: UIView {
     }
     
     //MARK: - Methods
-    func commonInit() {
+    private func commonInit() {
         let viewFromXib = Bundle.main.loadNibNamed("CustomXIBView", owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
         viewFromXib.autoresizingMask = [.flexibleWidth , .flexibleHeight]

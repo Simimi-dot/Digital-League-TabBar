@@ -34,7 +34,7 @@ class AutoLayutContoller: UIViewController {
     
     //MARK: - Methods
     
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         let someButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showModalViewController))
         someButton.tintColor = .black
         
@@ -45,7 +45,7 @@ class AutoLayutContoller: UIViewController {
         navigationItem.rightBarButtonItem = someButton
     }
     
-    func configureView() {
+    private func configureView() {
         self.view.addSubview(customView.customCourseView)
         
         customView.customCourseView.addSubview(customView.courseEventLabel)
@@ -98,19 +98,19 @@ class AutoLayutContoller: UIViewController {
 
 extension AutoLayutContoller {
     @objc
-    func showModalViewController() {
+    private func showModalViewController() {
         let ricardoView = RicardoMilosController()
         ricardoView.view.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.6)
         navigationController?.present(ricardoView, animated: true, completion: nil)
     }
     
     @objc
-    func switchTabBar() {
+    private func switchTabBar() {
         tabBarController?.selectedIndex = 3
     }
     
     @objc
-    func newViewController() {
+    private func newViewController() {
         let newVC = UIViewController()
         
         newVC.view.backgroundColor = .systemCyan

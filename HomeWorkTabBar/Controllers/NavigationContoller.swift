@@ -28,7 +28,7 @@ class NavigationContoller: UIViewController {
     }
     
     //MARK: - Methods
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: nil)
         button.tintColor = .black
         

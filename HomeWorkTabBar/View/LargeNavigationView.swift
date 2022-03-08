@@ -11,14 +11,14 @@ import UIKit
 class LargeNavigationView: UIView {
     
     //MARK: - Properties
-    lazy var navigationView: UIView = {
+     lazy var navigationView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemCyan
         return view
     }()
     
-    lazy var largeNavigationButton: UIButton = {
+     lazy var largeNavigationButton: UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Нажми на меня", for: .normal)
@@ -38,7 +38,7 @@ class LargeNavigationView: UIView {
     }
     
     //MARK: - Methods
-    func configureButtonView() {
+    private func configureButtonView() {
         self.addSubview(navigationView)
         
         navigationView.addSubview(largeNavigationButton)

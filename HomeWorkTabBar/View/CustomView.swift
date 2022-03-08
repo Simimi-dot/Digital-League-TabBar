@@ -11,7 +11,7 @@ import UIKit
 class CustomView: UIView {
     
     // MARK: - Properties
-    lazy var customCourseView: UIView = {
+     lazy var customCourseView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
@@ -19,7 +19,7 @@ class CustomView: UIView {
         return view
     }()
     
-    lazy var courseEventLabel: UILabel = {
+     lazy var courseEventLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
@@ -27,7 +27,7 @@ class CustomView: UIView {
         return label
     }()
     
-    lazy var backEventView: UIView = {
+     lazy var backEventView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
@@ -37,7 +37,7 @@ class CustomView: UIView {
         return view
     }()
     
-    lazy var courseNameLabel: UILabel = {
+     lazy var courseNameLabel: UILabel = {
         var name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
         name.textColor = .black
@@ -55,7 +55,7 @@ class CustomView: UIView {
         return button
     }()
     
-    lazy var priceLabel: UILabel = {
+     lazy var priceLabel: UILabel = {
         var priceLabel = UILabel()
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.textColor = .black

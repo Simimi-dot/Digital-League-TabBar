@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController {
     }
     
     // MARK: - Methods
-    func customizeTabBar() {
+    private func customizeTabBar() {
         autoLayout.title = "Auto Layout"
         xib.title = "XIB"
         manual.title = "Manual"
@@ -37,7 +37,7 @@ class MainTabBarController: UITabBarController {
         self.tabBar.backgroundColor = .systemGray
     }
     
-    func customizeTabBarImage() {
+    private func customizeTabBarImage() {
         guard let items = self.tabBar.items else { return }
         
         let arrayOfSystemImages = ["house", "flame", "smoke", "keyboard", "moon"]

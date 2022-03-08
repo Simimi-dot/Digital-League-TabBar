@@ -30,7 +30,7 @@ class LargeNavigationController: UIViewController {
     }
     
     //MARK: - Methods
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: nil)
         button.tintColor = .black
         
@@ -45,7 +45,7 @@ class LargeNavigationController: UIViewController {
 //MARK: - Extension @objc
 extension LargeNavigationController {
     @objc
-    func moveForward() {
+    private func moveForward() {
         let newVC = UIViewController()
         let someView = LargeNavigationView()
         
@@ -60,7 +60,7 @@ extension LargeNavigationController {
     }
     
     @objc
-    func moveForwardAgain() {
+    private func moveForwardAgain() {
         let againNewVC = UIViewController()
         againNewVC.view.backgroundColor = .systemRed
         againNewVC.navigationItem.largeTitleDisplayMode = .always

@@ -10,7 +10,7 @@
 		062302FB27D3CBA000FF2905 /* CustomXIBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062302FA27D3CBA000FF2905 /* CustomXIBView.xib */; };
 		06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */; };
 		06329DF727D6449C00AA5C5F /* BarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329DF627D6449C00AA5C5F /* BarAppearance.swift */; };
-		06329E0227D65CEB00AA5C5F /* NewCustomXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329E0127D65CEB00AA5C5F /* NewCustomXIBView.swift */; };
+		06329E0227D65CEB00AA5C5F /* CustomXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06329E0127D65CEB00AA5C5F /* CustomXIBView.swift */; };
 		064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7827D2342D00A3092C /* AppDelegate.swift */; };
 		064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7A27D2342D00A3092C /* SceneDelegate.swift */; };
 		064DAE7D27D2342D00A3092C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE7C27D2342D00A3092C /* MainTabBarController.swift */; };
@@ -22,6 +22,7 @@
 		064DAE9427D2435E00A3092C /* NavigationContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE9327D2435E00A3092C /* NavigationContoller.swift */; };
 		064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE9527D2437300A3092C /* LargeNavigationContoller.swift */; };
 		064DAEA027D26B9500A3092C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DAE9F27D26B9500A3092C /* CustomView.swift */; };
+		06898B7627D7573E00AEF8E0 /* CustomXIBButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06898B7527D7573E00AEF8E0 /* CustomXIBButtons.swift */; };
 		068BA06827D4DC9C00A758D6 /* CourseEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068BA06727D4DC9C00A758D6 /* CourseEnum.swift */; };
 		068BA06E27D5454300A758D6 /* RicardoMilosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068BA06D27D5454300A758D6 /* RicardoMilosController.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +31,7 @@
 		062302FA27D3CBA000FF2905 /* CustomXIBView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBView.xib; sourceTree = "<group>"; };
 		06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNavigationView.swift; sourceTree = "<group>"; };
 		06329DF627D6449C00AA5C5F /* BarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAppearance.swift; sourceTree = "<group>"; };
-		06329E0127D65CEB00AA5C5F /* NewCustomXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomXIBView.swift; sourceTree = "<group>"; };
+		06329E0127D65CEB00AA5C5F /* CustomXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXIBView.swift; sourceTree = "<group>"; };
 		064DAE7527D2342D00A3092C /* HomeWorkTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064DAE7827D2342D00A3092C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064DAE7A27D2342D00A3092C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		064DAE9327D2435E00A3092C /* NavigationContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContoller.swift; sourceTree = "<group>"; };
 		064DAE9527D2437300A3092C /* LargeNavigationContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNavigationContoller.swift; sourceTree = "<group>"; };
 		064DAE9F27D26B9500A3092C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		06898B7527D7573E00AEF8E0 /* CustomXIBButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXIBButtons.swift; sourceTree = "<group>"; };
 		068BA06727D4DC9C00A758D6 /* CourseEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEnum.swift; sourceTree = "<group>"; };
 		068BA06D27D5454300A758D6 /* RicardoMilosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicardoMilosController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,11 +78,12 @@
 		06329DFF27D6515700AA5C5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				064DAE8327D2343000A3092C /* LaunchScreen.storyboard */,
 				064DAE9F27D26B9500A3092C /* CustomView.swift */,
 				06329DF027D6338A00AA5C5F /* LargeNavigationView.swift */,
-				064DAE8327D2343000A3092C /* LaunchScreen.storyboard */,
 				062302FA27D3CBA000FF2905 /* CustomXIBView.xib */,
-				06329E0127D65CEB00AA5C5F /* NewCustomXIBView.swift */,
+				06329E0127D65CEB00AA5C5F /* CustomXIBView.swift */,
+				06898B7527D7573E00AEF8E0 /* CustomXIBButtons.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,8 +208,9 @@
 				06329DF127D6338A00AA5C5F /* LargeNavigationView.swift in Sources */,
 				064DAE8D27D2402100A3092C /* AutoLayoutContoller.swift in Sources */,
 				064DAE9027D2433300A3092C /* XIBContoller.swift in Sources */,
-				06329E0227D65CEB00AA5C5F /* NewCustomXIBView.swift in Sources */,
+				06329E0227D65CEB00AA5C5F /* CustomXIBView.swift in Sources */,
 				064DAE7927D2342D00A3092C /* AppDelegate.swift in Sources */,
+				06898B7627D7573E00AEF8E0 /* CustomXIBButtons.swift in Sources */,
 				064DAE9627D2437300A3092C /* LargeNavigationContoller.swift in Sources */,
 				064DAE7B27D2342D00A3092C /* SceneDelegate.swift in Sources */,
 			);

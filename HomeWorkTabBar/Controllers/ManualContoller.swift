@@ -38,7 +38,7 @@ class ManualController: UIViewController {
     }
     
     //MARK: - Methods
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
         
@@ -49,7 +49,7 @@ class ManualController: UIViewController {
         navigationItem.rightBarButtonItem = button
     }
     
-    func addView() {
+    private func addView() {
         self.view.addSubview(customView.customCourseView)
         self.view.addSubview(customView.courseNameLabel)
         self.view.addSubview(customView.moreButton)
@@ -57,7 +57,7 @@ class ManualController: UIViewController {
         self.view.addSubview(customView.blueButton)
     }
     
-    func configureView() {
+    private func configureView() {
         customView.customCourseView.frame.size = CGSize(width: 343, height: 174)
         customView.customCourseView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
         
@@ -71,7 +71,7 @@ class ManualController: UIViewController {
 //MARK: - Extension @objc
 extension ManualController {
     @objc
-    func showModalViewController() {
+    private func showModalViewController() {
         let ricardoView = RicardoMilosController()
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
         
@@ -84,12 +84,12 @@ extension ManualController {
     }
     
     @objc
-    func switchTabBar() {
+    private func switchTabBar() {
         tabBarController?.selectedIndex = 3
     }
     
     @objc
-    func newViewController() {
+    private func newViewController() {
         let newVC = UIViewController()
         
         newVC.view.backgroundColor = .systemGreen

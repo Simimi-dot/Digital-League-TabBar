@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK: - Enum
+
 enum courseName: String {
     case backend = "Backend разработка"
     case andriod = "Курсы по Android разработкe"

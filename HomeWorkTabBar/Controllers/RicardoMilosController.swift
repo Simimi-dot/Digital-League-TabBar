@@ -12,7 +12,7 @@ import UIKit
 class RicardoMilosController: UIViewController {
     
     //MARK: - Properties
-    let ricardoImage: UIImageView = {
+    lazy var ricardoImage: UIImageView = {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -26,7 +26,7 @@ class RicardoMilosController: UIViewController {
     }
     
     //MARK: - Methods
-    func configureView() {
+    private func configureView() {
         ricardoImage.image = UIImage(named: "Ricardo")
         
         self.view.addSubview(ricardoImage)

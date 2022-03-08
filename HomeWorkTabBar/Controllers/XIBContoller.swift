@@ -12,25 +12,8 @@ class XIBContoller: UIViewController {
     
     //MARK: - Properties
     let navigationBarAppearance = NavigationBarAppearance()
-    let newXibView = NewCustomXIBView()
-    
-    lazy var moreButton: UIButton = {
-        var button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("", for: .normal)
-        button.setTitleColor(.red, for: .normal)
-        button.addTarget(self, action: #selector(moveToNextVC), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var blueButton: UIButton = {
-       var button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("", for: .normal)
-        button.setTitleColor(.orange, for: .normal)
-        button.addTarget(self, action: #selector(moveToManual), for: .touchUpInside)
-        return button
-    }()
+    let newXibView = CustomXIBView()
+    let xibButtons = CustomXIBButtons()
     
     //MARK: - Life cycle
     override func loadView() {
@@ -43,11 +26,14 @@ class XIBContoller: UIViewController {
         view.backgroundColor = .systemPurple
         configureNavigationBar()
         configureButtons()
+        
+        xibButtons.moreButton.addTarget(self, action: #selector(moveToNextVC), for: .touchUpInside)
+        xibButtons.blueButton.addTarget(self, action: #selector(moveToManual), for: .touchUpInside)
     }
     
     //MARK: - Methods
     
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         let button = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showModalViewController))
         button.tintColor = .black
         
@@ -58,20 +44,20 @@ class XIBContoller: UIViewController {
         navigationItem.rightBarButtonItem = button
     }
     
-    func configureButtons() {
-        newXibView.addSubview(moreButton)
-        newXibView.addSubview(blueButton)
+    private func configureButtons() {
+        newXibView.addSubview(xibButtons.moreButton)
+        newXibView.addSubview(xibButtons.blueButton)
         
         NSLayoutConstraint.activate([
-            moreButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 82),
-            moreButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 20),
-            moreButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -244),
-            moreButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -72),
+            xibButtons.moreButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 82),
+            xibButtons.moreButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 20),
+            xibButtons.moreButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -244),
+            xibButtons.moreButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -72),
             
-            blueButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 118),
-            blueButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 251),
-            blueButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -20),
-            blueButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -20)
+            xibButtons.blueButton.topAnchor.constraint(equalTo: newXibView.newXibCouseView.topAnchor, constant: 118),
+            xibButtons.blueButton.leadingAnchor.constraint(equalTo: newXibView.newXibCouseView.leadingAnchor, constant: 251),
+            xibButtons.blueButton.trailingAnchor.constraint(equalTo: newXibView.newXibCouseView.trailingAnchor, constant: -20),
+            xibButtons.blueButton.bottomAnchor.constraint(equalTo: newXibView.newXibCouseView.bottomAnchor, constant: -20)
         ])
         
     }
@@ -81,14 +67,14 @@ class XIBContoller: UIViewController {
 
 extension XIBContoller {
     @objc
-    func showModalViewController() {
+    private func showModalViewController() {
         let ricardoView = RicardoMilosController()
         ricardoView.view.backgroundColor = .systemPurple
         navigationController?.present(ricardoView, animated: true, completion: nil)
     }
     
     @objc
-    func moveToNextVC() {
+    private func moveToNextVC() {
         let newVC = UIViewController()
         newVC.view.backgroundColor = .brown
 
@@ -96,7 +82,7 @@ extension XIBContoller {
     }
     
     @objc
-    func moveToManual() {
+    private func moveToManual() {
         self.tabBarController?.selectedIndex = 3
     }
 }
